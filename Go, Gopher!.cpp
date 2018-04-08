@@ -1,18 +1,27 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
-
+static int area[1000][1000] = { 0 };
+void init()
+{
+	for(int i=0;i<1000;i++)
+		{
+			for(int j=0;j<1000;j++)
+			{
+				area[i][j]=0;
+			}	
+		}	
+}
 int main()
 {
 	int T;
 	int A;
 	int subAreaComplet;
-	static int area[1000][1000] = { 0 };
+	//static int area[1000][1000] = { 0 };
 	cin >> T;
 	for (int i = 0; i < T; i++)
 	{
-		static int area[1000][1000] = { 0 };
+		init();
 		cin >> A;
 		int r = 3, c = 3;
 		int p = r*c;
@@ -61,8 +70,7 @@ int main()
 
 	}
 
-	//cout<<"______________"<<subAreaComplet<<endl;
-	///system("pause");
+	
 
 }
 
